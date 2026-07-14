@@ -1,22 +1,22 @@
-flowchart TB
+flowchart TD
 
-A[Healthcare User] --> B[GenXBots AI Web Interface]
+A[User] --> B[GenXBots AI Web Interface]
 
 B --> C[FastAPI Backend API]
 
 C --> D[Authentication and Request Validation]
 
-D --> E[RAG Orchestration Engine]
+D --> E[RAG Pipeline]
 
 E --> F[Document Retriever]
 
-F --> G[ChromaDB Vector Database]
+F --> G[Vector Database - ChromaDB]
 
-G --> H[Embedding Model<br/>Sentence Transformers]
+G --> H[Embedding Model - Sentence Transformers]
 
-H --> I[Healthcare Knowledge Base]
+H --> I[Document Knowledge Base]
 
-I --> J[Healthcare Documents<br/>PDFs Policies Guidelines]
+I --> J[Healthcare Documents - PDF Policies Guidelines]
 
 E --> K[Google Vertex AI Gemini LLM]
 
