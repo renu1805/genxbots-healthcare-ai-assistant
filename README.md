@@ -68,27 +68,19 @@ Citation --> Web
 
 
 ```mermaid
-sequenceDiagram
+flowchart LR
 
-participant User
-participant API
-participant RAG
-participant DB
-participant LLM
+Documents[Healthcare Documents] --> Loader[Document Loader]
 
-User->>API: Ask question
+Loader --> Extract[Text Extraction]
 
-API->>RAG: Process request
+Extract --> Chunk[Document Chunking]
 
-RAG->>DB: Search documents
+Chunk --> Embed[Embedding Generation]
 
-DB-->>RAG: Return context
+Embed --> Store[ChromaDB Vector Store]
 
-RAG->>LLM: Question + context
-
-LLM-->>API: Generate answer
-
-API-->>User: Response with citations
+Store --> Search[Semantic Search]
 ```
 
 ```mermaid
