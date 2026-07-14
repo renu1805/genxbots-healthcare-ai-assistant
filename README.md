@@ -67,21 +67,6 @@ Citation --> Web
 
 
 
-```mermaid
-flowchart LR
-
-Documents[Healthcare Documents] --> Loader[Document Loader]
-
-Loader --> Extract[Text Extraction]
-
-Extract --> Chunk[Document Chunking]
-
-Chunk --> Embed[Embedding Generation]
-
-Embed --> Store[ChromaDB Vector Store]
-
-Store --> Search[Semantic Search]
-```
 
 ```mermaid
 sequenceDiagram
@@ -106,7 +91,6 @@ LLM-->>API: Generate answer
 
 API-->>User: Response with citations
 ```
-
 ## Future Roadmap
 
 - Enterprise authentication
