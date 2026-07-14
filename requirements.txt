@@ -9,3 +9,6 @@ uvicorn
 python-dotenv
 langchain-google-vertexai
 google-cloud-aiplatform
+fastapi
+uvicorn
+pydantic
