@@ -36,6 +36,62 @@ Response --> Citation[Source Citations]
 Citation --> Web
 ```
 
+
+
+```mermaid
+sequenceDiagram
+
+participant User
+participant API
+participant RAG
+participant DB
+participant LLM
+
+User->>API: Ask question
+
+API->>RAG: Process request
+
+RAG->>DB: Search documents
+
+DB-->>RAG: Return context
+
+RAG->>LLM: Question + context
+
+LLM-->>API: Generate answer
+
+API-->>User: Response with citations
+```
+
+```mermaid
+sequenceDiagram
+
+participant User
+participant API
+participant RAG
+participant DB
+participant LLM
+
+User->>API: Ask question
+
+API->>RAG: Process request
+
+RAG->>DB: Search documents
+
+DB-->>RAG: Return context
+
+RAG->>LLM: Question + context
+
+LLM-->>API: Generate answer
+
+API-->>User: Response with citations
+```
+
+## Future Roadmap
+
+- Enterprise authentication
+- Multi-document support
+- Analytics dashboard
+
 ## Technology Stack
 
 - Vertex AI Gemini
@@ -53,9 +109,3 @@ Document → Embeddings → Vector Search → Gemini → Response
 - HIPAA considerations
 - Source citations
 - Hallucination reduction
-
-## Future Roadmap
-
-- Enterprise authentication
-- Multi-document support
-- Analytics dashboard
