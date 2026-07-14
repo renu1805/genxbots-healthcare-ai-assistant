@@ -2,19 +2,19 @@
 GenXBots Healthcare AI Assistant
 
 FastAPI Backend
-
-Provides API endpoints for chatbot interaction.
+Connects website requests to RAG chatbot pipeline.
 """
 
 from fastapi import FastAPI
 from pydantic import BaseModel
 
-from chatbot import create_qa_chain, ask_question
+from chatbot import create_llm
+from retriever import retrieve_documents
 
 
 app = FastAPI(
     title="GenXBots Healthcare AI Assistant API",
-    description="Generative AI healthcare assistant powered by RAG and Vertex AI",
+    description="Healthcare Generative AI Assistant using RAG and Vertex AI",
     version="1.0"
 )
 
@@ -26,17 +26,22 @@ class QuestionRequest(BaseModel):
 @app.get("/")
 def health_check():
     return {
-        "status": "GenXBots AI Assistant is running"
+        "status": "GenXBots AI Assistant API running"
     }
 
 
 @app.post("/chat")
 def chat(request: QuestionRequest):
 
-    # Placeholder response until vector database is connected
+    question = request.question
 
-    return {
-        "question": request.question,
-        "answer": "AI response will be generated using Vertex AI Gemini.",
-        "source": []
+    # Temporary response until vector database is loaded
+    # Next step will connect ChromaDB
+
+    response = {
+        "question": question,
+        "answer": "RAG pipeline connection in progress.",
+        "sources": []
     }
+
+    return response
