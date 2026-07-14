@@ -12,6 +12,26 @@ AI-powered knowledge assistant that allows users to ask questions...
 
 ## Architecture
 
+GenXBots Healthcare AI Assistant uses:
+
+Frontend: Web-based conversational AI interface
+
+Backend: FastAPI REST API services
+
+AI Framework: Retrieval-Augmented Generation (RAG)
+
+LLM: Google Vertex AI Gemini
+
+Embeddings: Sentence Transformers
+
+Vector Store: ChromaDB
+
+Knowledge Sources: Healthcare policies, clinical documents, and guidelines
+
+Security: HIPAA-aligned controls, authentication, audit logging
+
+Output: Context-grounded answers with document citations
+
 ```mermaid
 flowchart TD
 
