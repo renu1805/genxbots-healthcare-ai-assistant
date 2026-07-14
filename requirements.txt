@@ -1,1 +1,9 @@
-
+langchain
+langchain-community
+pypdf
+chromadb
+sentence-transformers
+streamlit
+fastapi
+uvicorn
+python-dotenv
