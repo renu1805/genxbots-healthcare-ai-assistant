@@ -7,19 +7,24 @@ Creates vector representations of healthcare documents
 for semantic search and RAG retrieval.
 """
 
-from langchain_community.embeddings import HuggingFaceEmbeddings
+"""
+GenXBots Healthcare AI Assistant
+
+Embedding Module
+
+Uses Google Vertex AI embeddings for semantic search.
+"""
+
+from langchain_google_vertexai import VertexAIEmbeddings
 
 
 def create_embedding_model():
     """
-    Initialize embedding model.
-
-    Converts text into numerical vectors
-    for similarity search.
+    Initialize Vertex AI embedding model.
     """
 
-    embeddings = HuggingFaceEmbeddings(
-        model_name="sentence-transformers/all-MiniLM-L6-v2"
+    embeddings = VertexAIEmbeddings(
+        model_name="text-embedding-005"
     )
 
     return embeddings

@@ -44,5 +44,5 @@ def build_database(document_path):
 if __name__ == "__main__":
 
     build_database(
-        "data/sample_healthcare_policy.pdf"
-    )
+    "data/sample_documents/genxbotscmsguidelines.pdf"
+)
