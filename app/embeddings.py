@@ -24,7 +24,8 @@ def create_embedding_model():
     """
 
     embeddings = VertexAIEmbeddings(
-        model_name="text-embedding-005"
-    )
-
+    model_name="text-embedding-005",
+    project="genxbots",
+    location="us-central1"
+)
     return embeddings
