@@ -7,7 +7,6 @@ Connects retrieved healthcare documents
 with Google Vertex AI Gemini.
 """
 
-from langchain_google_vertexai import ChatVertexAI
 from langchain.chains import RetrievalQA
 
 
@@ -15,6 +14,8 @@ def create_llm():
     """
     Initialize Vertex AI Gemini model.
     """
+
+    from langchain_google_vertexai import ChatVertexAI
 
     llm = ChatVertexAI(
         model="gemini-2.5-flash",

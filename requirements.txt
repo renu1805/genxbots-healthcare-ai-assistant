@@ -8,8 +8,8 @@ google-cloud-storage<3.0.0
 pydantic==2.8.2
 
 pypdf
-chromadb
-sentence-transformers
+faiss-cpu
+
 
 fastapi
 uvicorn
